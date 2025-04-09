@@ -1,0 +1,420 @@
+---
+title: "Neuropsychological Assessment for Psychiatrists"
+subtitle: "PGY2 Residency Didactic"
+author: "**Joey W. Trampush, Ph.D.**"
+institute: |
+  Department of Psychiatry and the Behavioral Sciences  \
+  Keck School of Medicine  of USC
+date: last-modified
+date-format: long
+format: 
+  blackboard-revealjs:
+    incremental: false
+    show-notes: false #separate-page
+    slide-number: true
+    show-slide-number: print
+    menu:
+      side: left
+      width: normal
+    progress: true
+    history: true
+    chalkboard: false
+    multiplex: true
+    transition: slide
+    background-transition: fade
+    controls-layout: bottom-right
+    footer: <https://brainworkup.github.io/psychiatry-residents/>
+    css: ["css/npsych-fonts.css"]
+    width: 1600
+    height: 900
+    fig-format: svg
+    fig-align: center
+    standalone: true
+    embed-resources: false
+---
+
+```{r setup, include=FALSE}
+## load libraries
+library(crosstalk)
+library(dplyr)
+library(gifski)
+library(highcharter)
+library(htmlwidgets)
+library(knitr)
+library(languageserver)
+library(manipulateWidget)
+library(revealjs)
+library(svglite)
+library(tibble)
+library(vroom)
+library(readr)
+library(widgetframe)
+library(xaringan)
+library(xaringanExtra)
+library(xaringanthemer)
+library(tidyverse)
+library(bwu)
+## knitr options
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.path = "figs/",
+  fig.width = 12,
+  fig.height = 4,
+  fig.asp = .5,
+  fig.retina = 3,
+  out.width = "100%",
+  fig.showtext = TRUE,
+  comment = NULL,
+  cache = FALSE,
+  cache.path = "cache/",
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE,
+  dev = c("svg", "svglite"),
+  hiline = TRUE
+)
+library(showtext)
+library(ggplot2)
+font_add_google("Fira Code", "Fira Code")
+showtext_auto()
+
+# theme for chalkboard
+theme_chalk <- function() {
+  theme_minimal() %+replace%
+    theme(
+      axis.ticks = element_line(colour = "white", size = 0.25),
+      text = element_text(colour = "white"),
+      axis.text = element_text(colour = "white", family = "Fira Code", size = 18),
+      axis.title = element_text(colour = "white", family = "Fira Code", size = 24),
+      panel.background = element_rect(colour = NA, fill = "transparent"),
+      plot.background = element_rect(colour = "white", fill = "transparent"),
+      legend.position = "bottom",
+      legend.title = element_blank(),
+      panel.grid.minor = element_blank(),
+      panel.grid.major.x = element_line(colour = "white", size = 0.25),
+      panel.grid.major.y = element_line(colour = "white", size = 0.25),
+      legend.text = element_text(size = 24)
+    )
+}
+
+knitr::opts_chunk$set(dev.args = list(bg = "transparent"))
+```
+
+## Learning Objectives
+
+- Understand the role of neuropsychological assessment in psychiatric practice
+- Recognize the domains of cognitive functioning assessed in a
+neuropsychological evaluation
+- Interpret the results of a neuropsychological evaluation in the context of
+psychiatric diagnosis and treatment planning
+
+## Reason for Referral
+
+**_From you to me_** 
+
+- Psychodiagnostic clarification ( e.g., poor response to pharmacotherapy)
+
+
+- To clarify the presence of cognitive
+  deficits that may be contributing to a patient's psychopathology
+
+- Role of neuropsychological assessment in psychiatric differential diagnosis is
+challenging ...
+
+# Standard neuropsychological test battery
+
+## Behavioral/Emotional/Personality
+
+- Conners' Adult ADHD Diagnostic Interview for DSM-IV (CAADID), Part I: History
+- Conners' Adult ADHD Rating Scales--Self-Report: Long Version (CAARS--S:L)
+- Conners' Adult ADHD Rating Scales--Observer Report: Long Version (CAARS--O:L)
+- Comprehensive Executive Function Inventory Adult (CEFI Adult), Self-Report Form
+- Comprehensive Executive Function Inventory Adult (CEFI Adult), Observer Form
+- Personality Assessment Inventory (PAI)
+
+## Neurocognitive Examination
+
+- Wechsler Adult Intelligence Scale, 4th ed (WAIS-4): Similarities, Matrix Reasoning, Letter-Number Sequencing, Coding
+- Wechsler Individual Achievement Test, 4th ed (WIAT-4): Word Reading, Reading Comprehension, Pseudoword Decoding, Orthographic Fluency, Decoding Fluency
+- Neuropsychological Assessment Battery, Screener (NAB): Attention, Language, Memory, Spatial, and Executive Functions Modules
+- NIH Executive Abilities--Measures and Instruments for Neurobehavioral Evaluation and Research (NIH EXAMINER): Unstructured Task, Verbal Fluency, Behavioral Rating Scale
+- California Verbal Learning Test, 3rd ed (CVLT-3), Brief Form
+- Rey-Osterrieth Complex Figure Test (ROCFT)
+- Trail Making Test (TMT)
+
+## Effort/Validity Testing
+
+- ACS Word Choice Test
+- Dot Counting Test (DCT)
+
+---
+
+## Domains Assessed
+
+![](domains.png)
+
+## How do we measure these domains?
+
+![](stroop.svg)
+
+## Processing speed and \$\$\$
+
+![](coding_x_income.png)
+
+## General cognitive ability "*g*"
+
+:::: {.columns}
+
+::: {.column width="40%"}
+Performance across individual tests correlates strongly among each other
+:::
+
+::: {.column width="60%"}
+![](g.png)
+:::
+
+::::
+
+## Attention/Executive {auto-animate=true}
+<!-- ## {auto-animate=true} -->
+
+Attention
+
+Working Memory
+
+Processing Speed
+
+Executive Functioning
+
+## Attention/Executive {auto-animate=true}
+
+Attention
+
+  - attention span
+  - attentional fluency
+
+## Attention/Executive {auto-animate=true}
+<!-- ## {auto-animate=true} -->
+
+Working Memory
+
+  - verbal working memory
+  - nonverbal working memory
+
+Attention
+
+## Attention/Executive {auto-animate=true}
+<!-- ## {auto-animate=true} -->
+
+Processing Speed
+
+- psychomotor speed
+- cognitive efficiency
+
+Working Memory
+
+Attention
+
+## Attention/Executive {auto-animate=true}
+<!-- ## {auto-animate=true} -->
+
+Executive Functioning
+
+- planning
+- judgment
+
+Processing Speed
+
+Working Memory
+
+Attention
+
+## Learning Disorders (LD)
+
+![](ld.png)
+
+## Distribution of Scores: _Population-level Interpretation_
+
+```{r, gauss-plot1, fig.cap = 'Performance classification of neuropsychological test scores in the general population.', fig.retina = 3, fig.asp = 0.5, out.width = '50%'}
+knitr::include_graphics("img/plot_narrow.png", auto_pdf = TRUE)
+```
+
+# Case Report #1
+
+- Patient: 20-something yr-old male 
+- Referral: ADHD/LD evaluation
+
+```{r, read-data}
+library(readr)
+neuropsych <- read_csv("data/neuropsych.csv")
+neurocog <-
+  readr::read_csv("data/neurocog.csv", show_col_types = TRUE) |>
+  dplyr::filter(scale != "Orientation") |>
+  dplyr::filter(narrow != "Response Monitoring") |>
+  dplyr::filter(narrow != "Recognition Memory")
+neurobehav <-
+  readr::read_csv("data/neurobehav.csv", show_col_types = TRUE)
+validity <-
+  readr::read_csv("data/validity.csv", show_col_types = TRUE)
+```
+
+## Neurocognitive Examination {background-color="black"}
+
+```{r merge-themes, echo=FALSE}
+# if using single theme
+theme <- highcharter::hc_theme_sandsignika()
+# if merging themes
+theme_merge <-
+  highcharter::hc_theme_merge(
+    highcharter::hc_theme_monokai(),
+    highcharter::hc_theme_darkunica()
+  )
+```
+
+```{r drilldown-plot1, fig.width = 12, fig.height = 8, fig.retina = 3, out.width = '100%'}
+
+patient <- "Biggie"
+data <- neurocog
+neuro_domain <- "Neuropsychological Test Scores"
+theme <- theme_merge
+plot1 <-
+  bwu::drilldown(
+    data = data,
+    patient = patient,
+    neuro_domain = neuro_domain,
+    theme = theme
+  )
+plot1
+```
+
+
+## Behavioral/Emotional/Personality {background-color="black"}
+
+::: {.notes}
+Summary of self-report and observer-report scales from the PAI, CAARS, and CEFI
+:::
+
+```{r drilldown-plot2, fig.width = 12, fig.height = 8, fig.retina = 3, out.width = '100%'}
+
+data <- neurobehav
+neuro_domain <- "Behavioral Rating Scales"
+theme <- theme_merge
+plot2 <-
+  bwu::drilldown(
+    data = data,
+    patient = patient,
+    neuro_domain = neuro_domain,
+    theme = theme
+  )
+plot2
+```
+
+## Effort/Validity Testing {background-color="black"}
+
+```{r drilldown-plot3, fig.width = 12, fig.height = 8, fig.retina = 3, out.width = '100%'}
+
+data <- validity
+neuro_domain <- "Effort/Validity Test Scores"
+theme <- theme_merge
+plot3 <-
+  bwu::drilldown(
+    data = data,
+    patient = patient,
+    neuro_domain = neuro_domain,
+    theme = theme
+  )
+plot3
+```
+
+# Case Report #2
+
+- Patient: 20-something yr-old female
+ 
+- Referral: ADHD and anxiety for accommodations
+
+```{r, read-data2}
+library(readr)
+neuropsych <- read_csv("data/adhd/neuropsych.csv")
+neurocog <-
+  readr::read_csv("data/adhd/neurocog.csv", show_col_types = TRUE) |>
+  dplyr::filter(scale != "Orientation") |>
+  dplyr::filter(narrow != "Response Monitoring") |>
+  dplyr::filter(narrow != "Recognition Memory")
+neurobehav <-
+  readr::read_csv("data/adhd/neurobehav.csv", show_col_types = TRUE)
+validity <-
+  readr::read_csv("data/adhd/validity.csv", show_col_types = TRUE)
+```
+
+## Neurocognitive Examination {background-color="black"}
+
+```{r merge-themes2, echo=FALSE}
+# if using single theme
+theme <- highcharter::hc_theme_sandsignika()
+# if merging themes
+theme_merge <-
+  highcharter::hc_theme_merge(
+    highcharter::hc_theme_monokai(),
+    highcharter::hc_theme_darkunica()
+  )
+```
+
+```{r drilldown-plot1b, fig.width = 12, fig.height = 8, fig.retina = 3, out.width = '100%'}
+
+patient <- "Tupac"
+data <- neurocog
+neuro_domain <- "Neuropsychological Test Scores"
+theme <- theme_merge
+plot1b <-
+  bwu::drilldown(
+    data = data,
+    patient = patient,
+    neuro_domain = neuro_domain,
+    theme = theme
+  )
+plot1b
+```
+
+
+## Behavioral/Emotional/Personality {background-color="black"}
+
+::: {.notes}
+Summary of self-report and observer-report scales from the PAI, CAARS, and CEFI
+:::
+
+```{r drilldown-plot2b, fig.width = 12, fig.height = 8, fig.retina = 3, out.width = '100%'}
+
+data <- neurobehav
+neuro_domain <- "Behavioral Rating Scales"
+theme <- theme_merge
+plot2b <-
+  bwu::drilldown(
+    data = data,
+    patient = patient,
+    neuro_domain = neuro_domain,
+    theme = theme
+  )
+plot2b
+```
+
+## Effort/Validity Testing {background-color="black"}
+
+```{r drilldown-plot3b, fig.width = 12, fig.height = 8, fig.retina = 3, out.width = '100%'}
+
+data <- validity
+neuro_domain <- "Effort/Validity Test Scores"
+theme <- theme_merge
+plot3b <-
+  bwu::drilldown(
+    data = data,
+    patient = patient,
+    neuro_domain = neuro_domain,
+    theme = theme
+  )
+plot3b
+```
+
+# Thank you!
+
+- URL to slide deck and resources:
+<https://brainworkup.github.io/psychiatry-residents/>

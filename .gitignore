@@ -1,0 +1,23 @@
+/.quarto/
+*.pptx
+*.docx
+# *.jpg
+# *.png
+/.history/
+/_site/
+.Rproj.user
+_04-00_feedback.html
+_04-00_feedback.Rmd
+# index-speaker.html
+# figs/
+ld_files/
+
+jwtADHD_LD_USC_Thames_Assessment_Course_101619/
+jwtADHD_LD_USC_Thames_Assessment_Course_101619_images/
+blackboard.qmd
+index_blackboard.qmd
+_index_og.qmd
+index_self_contained.html
+_extensions/
+_freeze/
+figs/
