@@ -1,13 +1,13 @@
 ---
 title: "Neuropsychological Assessment for Psychiatrists"
-subtitle: "PGY2 Residency Didactic"
+subtitle: "Residency Didactic"
 author: "**Joey W. Trampush, Ph.D.**"
 institute: |
   Department of Psychiatry and the Behavioral Sciences  \
   Keck School of Medicine  of USC
 date: last-modified
 date-format: long
-format: 
+format:
   blackboard-revealjs:
     incremental: false
     show-notes: false #separate-page
@@ -23,7 +23,7 @@ format:
     transition: slide
     background-transition: fade
     controls-layout: bottom-right
-    footer: <https://brainworkup.github.io/psychiatry-residents/>
+    footer: <https://brainworkup.github.io/2005-psychiatry-residents/>
     css: ["css/npsych-fonts.css"]
     width: 1600
     height: 900
@@ -84,8 +84,16 @@ theme_chalk <- function() {
     theme(
       axis.ticks = element_line(colour = "white", size = 0.25),
       text = element_text(colour = "white"),
-      axis.text = element_text(colour = "white", family = "Fira Code", size = 18),
-      axis.title = element_text(colour = "white", family = "Fira Code", size = 24),
+      axis.text = element_text(
+        colour = "white",
+        family = "Fira Code",
+        size = 18
+      ),
+      axis.title = element_text(
+        colour = "white",
+        family = "Fira Code",
+        size = 24
+      ),
       panel.background = element_rect(colour = NA, fill = "transparent"),
       plot.background = element_rect(colour = "white", fill = "transparent"),
       legend.position = "bottom",
@@ -110,7 +118,7 @@ psychiatric diagnosis and treatment planning
 
 ## Reason for Referral
 
-**_From you to me_** 
+**_From you to me_**
 
 - Psychodiagnostic clarification ( e.g., poor response to pharmacotherapy)
 
@@ -241,7 +249,7 @@ knitr::include_graphics("img/plot_narrow.png", auto_pdf = TRUE)
 
 # Case Report #1
 
-- Patient: 20-something yr-old male 
+- Patient: 20-something yr-old male
 - Referral: ADHD/LD evaluation
 
 ```{r, read-data}
@@ -329,7 +337,7 @@ plot3
 # Case Report #2
 
 - Patient: 20-something yr-old female
- 
+
 - Referral: ADHD and anxiety for accommodations
 
 ```{r, read-data2}
