@@ -23,7 +23,7 @@ format:
     transition: slide
     background-transition: fade
     controls-layout: bottom-right
-    footer: <https://brainworkup.github.io/2005-psychiatry-residents/>
+    footer: <https://brainworkup.github.io/2025-psychiatry-residents/>
     css: ["css/npsych-fonts.css"]
     width: 1600
     height: 900
