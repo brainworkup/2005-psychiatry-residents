@@ -1,10 +1,10 @@
 ---
 title: "Neuropsychological Assessment for Psychiatrists"
-subtitle: "Residency Didactic"
+subtitle: "PGY-2 Resident Didactics"
 author: "**Joey W. Trampush, Ph.D.**"
 institute: |
   Department of Psychiatry and the Behavioral Sciences  \
-  Keck School of Medicine  of USC
+  USC Keck School of Medicine
 date: last-modified
 date-format: long
 format:
